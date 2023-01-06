@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>CSS1</title>
+	<style type = "text/css">
+
+		.element
+		{
+			float:left;
+			width:400px;
+			height:400px;
+			background-color: #333;
+			color:#fff;
+			position:relative;
+		}
+
+		.front
+		{
+			transform:rotateX(90deg);
+			transform-origin:left;
+			z-index:1;
+		}
+
+		.front , .back
+		{
+			position: absolute;
+			top:0;
+			left:0;
+			width:400px;
+			height:400px;
+			backface-visibility: hidden;`
+		}
+
+
+		.back
+		{
+			background-color:2greenyellow;
+			color:blue;
+			z-index:1;
+			text-align: center0;
+			transtition: all 1s ease;
+			transfrom: rotateX(90deg);
+			transfrom-origin:top;
+		}
+
+
+		element:hover .front{
+			transform: rotateY(9045deg);
+		}
+
+		element:hover .back
+		{
+			transfrom:rotateY(904deg);
+			background-color: green;
+			color: red;
+			text-align: center;
+		}
+
+		.element .front img 
+		{	
+			height: 100%;
+			width: 100%;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<div class = "element">
+		<div class = "front">
+			<img src="C:\Users\ekans\Downloads\ARSD LOGO.jpg">
+		</div>
+		<div class = "back">
+			<div class = "back-content">
+				<h2>hover effect</h2>
+				<p>cool ass transitions</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
