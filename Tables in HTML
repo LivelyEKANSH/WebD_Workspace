@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tables in HTML</title>
+    <style>
+        .text1{
+            clear: left;
+            background-color: palevioletred;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body> 
+<div class = "text1">
+    <table width = "68%" border = "8" align="center">
+        <th>First Name</th><th>Last Name</th>
+        <tbody align="center">
+            <tr>
+                <td>Ekansh</td>
+                <td>Tanwar</td>
+            </tr>
+            <tr>
+                <td>Helen</td>
+                <td>Keller</td>
+            </tr>
+        </tbody>
+    </table>
+</div>  
+</body>
+</html>
