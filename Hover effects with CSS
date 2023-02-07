@@ -29,7 +29,7 @@
 			left:0;
 			width:400px;
 			height:400px;
-			backface-visibility: hidden;`
+			backface-visibility: hidden;
 		}
 
 
@@ -39,19 +39,19 @@
 			color:blue;
 			z-index:1;
 			text-align: center0;
-			transtition: all 1s ease;
-			transfrom: rotateX(90deg);
-			transfrom-origin:top;
+			transition: all 1s ease;
+			transform: rotateX(90deg);
+			transform-origin:top;
 		}
 
 
 		element:hover .front{
-			transform: rotateY(9045deg);
+			transform: rotateY(90deg);
 		}
 
 		element:hover .back
 		{
-			transfrom:rotateY(904deg);
+			transform:rotateY(90deg);
 			background-color: green;
 			color: red;
 			text-align: center;
@@ -70,7 +70,7 @@
 
 	<div class = "element">
 		<div class = "front">
-			<img src="C:\Users\ekans\Downloads\ARSD LOGO.jpg">
+			<img src="197292.jpg">
 		</div>
 		<div class = "back">
 			<div class = "back-content">
