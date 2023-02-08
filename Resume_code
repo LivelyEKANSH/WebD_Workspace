@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset  = "UTF-8">
+    <meta name = "viewport" content = "width = device-width , initial-scale=1">
+    <title>My Resume</title>
+    <style>
+        .header{
+            clear: left;
+		    width: 100%;
+		    background: blue;
+		    color: #FFF;
+		    font-family: Arial;
+		    text-align: center;
+		    padding: 0px ; 
+        }
+
+        .About_me{
+            float: right;
+		    clear: left;
+		    width: 100%;
+		    background: #000;
+		    color: #FFF;
+		    font-family: Arial;
+		    text-align: center;
+		    padding: 4px ;
+            animation-name: new_animation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            
+        }
+        @keyframes new_animation{
+            from {background-color: black;} to {background-color: #3224C3;} 
+        }
+        
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            color: blue;
+            cursor: pointer;
+        }
+        
+        a:active{
+            color: grey;
+        }
+
+        a:visited{
+            color: red;
+        }
+
+        a:link{
+            color: purple;
+        }
+
+        #footer{
+		    clear: left;
+		    width: 100%;
+		    background: black;
+		    color: #FFF;
+		    font-family: Arial;
+		    text-align: center;
+		    padding: 4px;
+	    }
+
+        .skills{
+            float: left;
+            padding: 30px;
+            color:#3224C3 ;
+            background: repeating-radial-gradient(pink,yellow,green);
+            border:#000;
+            border-radius: 25px;
+        }
+
+        .Projects_Certificates{
+            padding: 23px;
+            float: left;
+            color:#000000  ;
+            background: repeating-linear-gradient(#f9f1f1,brown);
+            border:2px #000000;
+            border-radius: 25px;
+        }
+        .Photo{
+            text-align: left;
+            float:left;
+        }
+        img:hover{
+            transform: rotate(-20deg);
+        }
+
+    </style>
+
+</head>
+<body style="background-image: url(197292.jpg);">
+<div class = "header">
+    <h1>WELCOME</h1>
+</div>
+<div class = "About_me">
+    <div class = "Photo">
+        <img src = "EkanshPhoto.jpg" alt = "my photo" width = 120 />
+    </div>
+    <h2>ABOUT ME</h2>
+    <p>3 years of coding experience. geek/nerd. Along with being passionate about coding, Athleticism  is one of my strong points. I am always energetic and ready to go.
+        I love to translate my theoritical knowledge into practical examples and produce results with efficiency. A touch-typer, i can hit 50-wpm easily.
+    </p>
+</div>
+<div class = "skills">
+    <h2>SKILLS</h2>
+    <ul>
+        <ol><b>Languages</b>
+            <i>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVASCRIPT</li>
+            <li>AJAX</li>
+            <li>PHP</li>
+            <li>PYTHON</li>
+            <li>MYSQL</li>
+            <li>C++</li>
+            <li>JAVA</li>
+            <li>WXMAXIMA</li>
+            </i>
+        </ol>
+        <ol>
+            <b>Logics</b>
+            <i>
+            <li>DATA STRUCTURES</li>
+            <li>DESIGN ANALYSIS AND ALGORITHMS</li>
+            <li>PYMYSQL</li>
+            <li>ANDROID PROGRAMMING</li>
+            <li>PLOTTING GRAPHS IN WXMAXIMA</li>
+            <li>OS- LINUX AND WINDOWS</li>
+            </i>
+        </ol>
+        <ol>
+            <b>Misc.</b>
+            <i>
+            <li>Fluency in spoken ENGLISH</li>
+            <li>Fluency in spoken HINDI</li>
+            <li>Leadership</li>
+            </i>
+        </ol>
+    </ul>
+</div>
+<div class = "Projects_Certificates">
+    <ul><b>PROJECTS</b>
+        <li>Hotel Management with basics of pyMySQL</li>
+        <li>working on Navbars with CSS and HTML</li>
+        <li>A simple game of Rock Paper Scissors in Python</li>
+        <li>A simple ad libs generator in Python</li>
+        <li>Hover effects in CSS and HTML</li>
+        <li>Dialog boxes using Java AWT and Swing</li>
+    </ul>
+    <ul>
+        <b>CERTIFICATIONS</b>
+        <li>HTML AND CSS CERTIFICATION COURSE FROM PIRPLE.COM</li>
+        <li>BEGINNER CSS AND JAVASCRIPT CERTIFICATION COURSES BY UDEMY.COM</li>
+    </ul>
+</div>
+<div>
+    <div id ="footer">
+        CONTACT ME</br>
+        <a href = "https://github.com/LivelyEKANSH" target="_blank">GITHUB</a>
+        <a href = "mailto: livelyekansh.streetworkout@gmail.com" target="_blank">GMAIL</a>
+    </div>
+</div>
+
+
+</div>
+</body>
+</html>
