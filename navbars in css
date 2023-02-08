@@ -1,0 +1,324 @@
+<!Doctype hmtl>
+<html>
+
+<head>
+
+<meta charset = "utf-8"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+<meta name = "viewport" content = "width = device-width, inital-scale=1">
+<title>CSS project 1</title>
+
+<style>
+
+	body{
+		margin:0;
+		padding:0;
+		line-height:1.5em;
+	}
+
+	.header{
+		max-width: 1050px;
+		width: 90%;
+		margin: auto;
+	}
+	
+	.navbar{
+		width: 100%;
+		box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+	}
+	
+	.nav-container{
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	/* .navbar . menu-items{
+		display: flex;
+	} */
+	
+	.navbar .nav-container li{
+		list-style: none;
+	}
+	
+	.navbar .nav-container a{
+		text-decoration: none;
+		color: black;
+		font-weight: 500;
+		font-size: 1.2rem;
+		padding: 0.7rem;
+	}
+	
+	.navbar .nav-container a:hover{
+		font-weight: bolder;
+	}
+	
+	.nav-container{
+		display: block;
+		position: relative;
+		height: 60px;
+	}
+	
+	.nav-container .checkbox{
+		position: absolute;
+		display: block;
+		height:32px;
+		width: 32px;
+		top:20px;
+		left:20px;
+		z-index: 5;
+		opacity: 0;
+		cursor: pointer;
+	}
+	
+	.nab-container .hamburger-lines{
+		display: block;
+		height: 26px;
+		width: 32px;
+		position: absolute;
+		top: 17px;
+		left: 20px;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	
+	.nav-container .hamburger-lines .line{
+		display: block;
+		height: 4px;
+		width: 100%;
+		border-radius: 10px;
+		background: black;
+	}
+	
+	.nav-container .hamburger-lines .line1{
+		transform-origin: 0% 0%;
+		transition: transform 0.4s ease-in-out;
+	}
+	
+	.nav-container .hamburger-lines .line2{
+		transition: transform 0.2s ease-in-out;
+	}
+	
+	.nav-container .hamburger-lines .line3{
+		transform-origin: 0% 100%;
+		transition: trasnform 0.4s ease-in-out;
+	}
+	
+	.navbar .menu-items{
+		padding-top: 120px;
+		box-shadow: inset 0 0 2000px rgba(255,255,255,0.5);
+		height: 100vh;
+		width: 100%;
+		transform: translate(-150%);
+		display: flex;
+		flex-direction: column;
+		margin-left: -40px;
+		padding-left: 50px;
+		transition: transform 0.5s ease-in-out;
+		text-align: center;
+	}
+	
+	.navbar .menu-items{
+		margin-bottom: 1.2rem;
+		font-size: 1.5rem;
+		font-weight: 500;
+	}
+	
+	.logo{
+		position: absolute;
+		top: 5px;
+		right: 15px;
+		font-size: 1.2rem;
+		color: black;
+	}
+	
+	.nav-container input[type="checkbox"]checked ~ .menu-items{
+		transform: translateX(0);
+	}
+	
+	.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+		transform: rotate(45deg);
+	}
+	
+	.nav-container input[type="checkbox"]:checked ~ .hamburger-lines.line2{
+		transform: scaleY(0);
+	}
+	
+	.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+		transform: rotate(-45deg);
+	}
+	
+	.nav-container input[type="checkbox"]:checked ~ .logo{
+		display: none;
+	}
+	
+	/*---------------------------------------------------------*/
+	
+	#contentwrapper{
+		float: left;
+		width: 100%;
+	}
+	
+	#contentcolumn{
+		margin: 0 230px 0 230px;
+	}
+	
+	#leftcolumn{
+		float: left;
+		width: 230px;
+		margin-left: -100%;
+		background: cyan;
+	}
+	
+	#rightcolumn{
+		float: left;
+		width: 230px;
+		margin-left: -230px;
+		background: pink;
+	}
+	
+	.innertext{
+		margin: 20px;
+		font-family: Arial;
+		color: black;
+	}
+	
+	#footer{
+		clear: left;
+		width: 100%;
+		background: black;
+		color: #FFF;
+		font-family: Arial;
+		text-align: center;
+		padding: 4px;
+	}
+	
+	/*--------------------------------------------------------------*/
+	
+	ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		background-color: #000;
+	}
+	
+	li{
+		float: left;
+		border-right: 1px solid #bbb;
+	}
+	
+	li:last-child{
+		border-right:none;
+	}
+	
+	li a{
+		display: block;
+		color: yellow;
+		text-align: center;
+		padding: 13px 15px;
+		text-decoration: none;
+	}
+	
+	li a:hover:not(.active){
+		background-color: #808080;
+	}
+	
+	.active{
+		background-color: #0099ff;
+	}
+	
+	/*------------------------------------------------------------*/
+	
+	#leftcolumn{
+		float: none;
+		width: 100%;
+		margin-left: 0;
+		clear: both;
+	}
+	
+	#contentcolumn{
+		margin-right: 0;
+	}
+	
+	@media (max-width: 600px){
+		#leftcolumn{
+			float: none;
+			width: 100%;
+			clear: both;
+			margin-left: 0;
+		}
+		
+		#contentcolumn{
+			margin-left: 0;
+		}
+	}
+	
+</style>
+
+</head>
+
+<body>
+<nav>
+	<div class = "navbar">
+		<div class = "container nav-container">
+			<input class = "checkbox" type = "checkbox" name="" id="">
+				<div class = "hamburger-lines">
+					<span class = "line line1"></span>
+					<span class = "line line2"></span>
+					<span class = "line line3"></span>
+				</div>
+			<div class = "logo">
+				<h1>Essentials</h1>
+			</div>
+			<div class = "menu-items">
+				<li><a href = "logo.jpg">Home</a></li>
+				<li><a href = "#">about</a></li>
+				<li><a href = "#">blogs</a></li>
+				<li><a href = "#">portfolio</a></li>
+				<li><a href = "#">contact</a></li>
+			</div>
+		</div>
+	</div>
+</nav>
+	
+	<div id = "contentwrapper">
+		<div id = "contentcolumn">
+			<div class = "innertext">
+			<b>Hello Baccho!</b>
+			<br />Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML (including XML dialects such as SVG, MathML or XHTML).[1] CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.[2]
+
+				CSS is designed to enable the separation of content and presentation, including layout, colors, and fonts.[3] This separation can improve content accessibility; provide more flexibility and control in the specification of presentation characteristics; enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity and repetition in the structural content; and enable the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.
+
+				Separation of formatting and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (via speech-based browser or screen reader), and on Braille-based tactile devices. CSS also has rules for alternate formatting if the content is accessed on a mobile device.[4]
+
+				The name cascading comes from the specified priority scheme to determine which style rule applies if more than one rule matches a particular element. This cascading priority scheme is predictable.
+			</div>
+		</div>
+	</div>
+	
+	<div id = "leftcolumn">
+		<div class = "innertext">
+			<em>230px</em><br/>The CSS specifications are maintained by the World Wide Web Consortium (W3C). Internet media type (MIME type) text/css is registered for use with CSS by RFC 2318 (March 1998). The W3C operates a free CSS validation service for CSS documents.[5]
+
+			In addition to HTML, other markup languages support the use of CSS including XHTML, plain XML, SVG, and XUL.
+		</div>
+	</div>
+	
+	<div id = "rightcolumn">
+		<div class = "innertext">
+			<em>230px</em><br/>The CSS specifications are maintained by the World Wide Web Consortium (W3C). Internet media type (MIME type) text/css is registered for use with CSS by RFC 2318 (March 1998). The W3C operates a free CSS validation service for CSS documents.[5]
+
+			In addition to HTML, other markup languages support the use of CSS including XHTML, plain XML, SVG, and XUL.
+		</div>
+	</div>
+	
+	<div>
+		<div id ="footer">Footer</div>
+	</div>
+	
+</div>	
+</body>
+
+</html>
+
